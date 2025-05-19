@@ -7,9 +7,11 @@ app.use(cors());
 // Middleware to parse JSON requests
 app.use(express.json());
 
+
+
 // Route to handle GET requests at /api/users
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
+  res.send("portfolio server is running!");
 });
 
 export default app;
