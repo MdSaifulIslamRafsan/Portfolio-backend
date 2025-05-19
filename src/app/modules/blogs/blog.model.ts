@@ -35,7 +35,7 @@ const blogSchema : Schema<TBlog> = new mongoose.Schema(
     },
   },
   {
-    timestamps: true, // adds createdAt and updatedAt
+    timestamps: true, 
   }
 );
 

@@ -21,4 +21,6 @@ router.get(
   BlogController.getBlogById
 );
 
+
+
 export const BlogRoutes = router;
