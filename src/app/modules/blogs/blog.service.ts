@@ -11,7 +11,16 @@ const getAllBlogsFromDB = async () => {
   return result;
 };
 
+const getBlogByIdFromDB = async (slug: string) => {
+    const result = await Blog.findOne({slug});
+    if (!result) {
+        throw new Error("Blog not found");
+    }
+    return result;
+}
+
 export const BlogService = {
   createBlogIntoDB,
   getAllBlogsFromDB,
+  getBlogByIdFromDB
 };

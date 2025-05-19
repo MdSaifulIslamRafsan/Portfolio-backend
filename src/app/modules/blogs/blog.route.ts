@@ -16,5 +16,9 @@ router.get(
   BlogController.getAllBlogs
 );
 
+router.get(
+  "/:slug",
+  BlogController.getBlogById
+);
 
 export const BlogRoutes = router;
