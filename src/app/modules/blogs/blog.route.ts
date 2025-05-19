@@ -11,7 +11,10 @@ router.post(
   BlogController.createBlog
 );
 
-
+router.get(
+  "/",
+  BlogController.getAllBlogs
+);
 
 
 export const BlogRoutes = router;
