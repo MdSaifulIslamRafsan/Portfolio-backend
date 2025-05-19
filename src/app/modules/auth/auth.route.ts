@@ -11,7 +11,7 @@ const router = express.Router();
 router.post('/login',validateRequest(AuthValidation.loginUserValidation), AuthController.login);
 router.post(
     '/refresh-token',
-  
+    validateRequest(AuthValidation.refreshTokenValidation),
     AuthController.refreshToken,
   );
 
