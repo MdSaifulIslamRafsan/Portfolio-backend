@@ -7,4 +7,5 @@ export interface TBlog  {
   tags: string[];
   author: string;
   readingTime: string;
+  isDeleted: boolean
 }

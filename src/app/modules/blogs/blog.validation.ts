@@ -15,6 +15,19 @@ export const blogValidationSchemaForCreate = z.object({
     readingTime: z.string().min(1, { message: "Reading time is required" }),
   }),
 });
+export const blogValidationSchemaForUpdate = z.object({
+  body: z.object({
+    slug: z.string().optional(),
+    title: z.string().optional(),
+    bannerImage: z.string().url().optional(),
+    content: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    author: z.string().optional(),
+    readingTime: z.string().optional(),
+  }),
+});
+
 export const BlogValidation = {
   blogValidationSchemaForCreate,
+  blogValidationSchemaForUpdate
 };
