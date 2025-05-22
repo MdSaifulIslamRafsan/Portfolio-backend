@@ -7,7 +7,7 @@ const skillSchema: Schema<TSkill> = new mongoose.Schema(
     name: { type: String, required: true },
     expertise: {
       type: String,
-      enum: ["Beginner", "Intermediate", "Expert"],
+      enum: ["Familiar", "Comfortable", "Expert"],
       required: true,
     },
     color: { type: String, required: true },
