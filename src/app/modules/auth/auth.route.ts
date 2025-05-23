@@ -14,7 +14,7 @@ router.post(
     validateRequest(AuthValidation.refreshTokenValidation),
     AuthController.refreshToken,
   );
-
+router.post("/logout", AuthController.logout);
 // router.post('/register', async (req, res) => {
 //   const userinfo = req.body;
 //   const hashPassword = await bcrypt.hash(userinfo.password, 10);
